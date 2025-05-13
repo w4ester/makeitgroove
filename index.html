@@ -16,25 +16,20 @@
       --body:#454D66;
       --max-width:1100px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Poppins",sans-serif;
-      line-height:1.6;
-      color:var(--body);
-      background:var(--light);
-    }
-    header{
-      background:var(--dark);
-      color:white;
-      padding:3rem 1rem 4rem;
-      text-align:center;
-    }
-    header h1{font-size:2.5rem;font-weight:700;margin-bottom:0.25rem}
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:"Poppins",sans-serif;line-height:1.6;color:var(--body);background:var(--light)}
+
+    /* NAVBAR */
+    nav{background:var(--dark);position:sticky;top:0;z-index:999;}
+    nav ul{max-width:var(--max-width);margin:auto;display:flex;gap:1.5rem;list-style:none;padding:0.75rem 1rem}
+    nav a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:500;letter-spacing:0.5px}
+    nav a:hover{color:var(--accent)}
+
+    header{background:var(--dark);color:white;padding:3.5rem 1rem 4.5rem;text-align:center}
+    header h1{font-size:2.5rem;font-weight:700;margin-bottom:0.35rem}
     header p.tagline{font-size:1.1rem;color:#ddd}
-    header .contact{
-      margin-top:1rem;
-      font-size:0.95rem;
-    }
+    header .profile-img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center;box-shadow:0 4px 10px rgba(0,0,0,.4);border:4px solid var(--accent);filter:brightness(1.05) contrast(1.08)}
+    header .contact{margin-top:1rem;font-size:0.95rem}
     header .contact a{color:#fff;text-decoration:none;margin:0 0.5rem}
     header .contact a:hover{color:var(--accent)}
 
@@ -43,39 +38,48 @@
     section:last-child{border-bottom:none}
     h2{font-size:1.75rem;color:var(--dark);margin-bottom:1rem}
 
-    /* About */
     .about p{margin-bottom:1rem}
 
-    /* Experience */
     .experience-item{margin-bottom:1.5rem}
     .experience-item h3{font-size:1.2rem;font-weight:600;color:var(--accent)}
     .experience-item span.period{font-size:0.9rem;color:var(--body);display:block;margin-bottom:0.5rem}
     .experience-item ul{margin-left:1rem;list-style:square}
     .experience-item ul li{margin:0.4rem 0}
 
-    /* Education */
     .education-item{margin-bottom:1.25rem}
     .education-item h3{font-size:1.1rem;font-weight:600;color:var(--accent)}
     .education-item span{display:block;font-size:0.9rem;color:var(--body)}
 
-    /* quick wins */
     .quick-wins li{margin:0.35rem 0}
 
-    /* Responsive */
     @media (min-width:700px){
       header h1{font-size:3rem}
       header p.tagline{font-size:1.2rem}
+      nav a{font-size:1rem}
     }
   </style>
 </head>
 <body>
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#cover">Cover Letter</a></li>
+      <li><a href="#quickwins">Quick Wins</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO HEADER -->
   <header>
+    <!-- PLACE michael.jpg in repo root or /assets -->
+    <img src="michael.jpg" alt="Michael O'Donnell smiling" class="profile-img" />
     <h1>Michael O'Donnell</h1>
     <p class="tagline">Instrumental & General Music Educator • K‑12 Curriculum Builder</p>
     <div class="contact">
-      <a href="mailto:makeitgroove@gmail.com">makeitgroove@gmail.com</a>
-      • <a href="tel:13017854440">301‑785‑4440</a>
-      • Huntingtown, MD
+      <a href="mailto:makeitgroove@gmail.com">makeitgroove@gmail.com</a> • <a href="tel:13017854440">301‑785‑4440</a> • Huntingtown, MD
     </div>
   </header>
 
@@ -83,30 +87,28 @@
     <!-- ABOUT -->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <p>
-        Passionate music educator with 20+ years of experience launching student ensembles, growing program enrollment by 40 %, and weaving STEM‑inspired, project‑based learning into performing‑arts classrooms. I create inclusive spaces where learners collaborate, perform, and discover their strengths.
-      </p>
+      <p>Passionate music educator with 20+ years of experience launching student ensembles, growing program enrollment by 40 %, and weaving STEM‑inspired, project‑based learning into performing‑arts classrooms. I create inclusive spaces where learners collaborate, perform, and discover their strengths.</p>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Selected Experience</h2>
       <article class="experience-item">
-        <h3>North County High School – Anne Arundel County Public Schools</h3>
-        <span class="period">Teacher | 2010 – Present</span>
+        <h3>North County High School – Anne Arundel County Public Schools</h3>
+        <span class="period">Teacher | 2010 – Present</span>
         <ul>
-          <li>Organized & directed <strong>3 seasonal concerts annually</strong>, engaging 600+ family members & raising <strong>$4 k</strong> for program growth.</li>
-          <li>Launched guitar, drumming, & jazz ensembles; enrollment up <strong>40 %</strong> in two years.</li>
+          <li>Organized & directed <strong>3 seasonal concerts annually</strong>, engaging 600+ family members & raising <strong>$4 k</strong> for program growth.</li>
+          <li>Launched guitar, drumming, & jazz ensembles; enrollment up <strong>40 %</strong> in two years.</li>
           <li>Founded county’s first fishing club and <em>Green Tech Pathway</em>; co‑led initiative that secured Maryland Green School status.</li>
-          <li>Designed 2,000 sq ft school garden used in cross‑disciplinary STEM & music “rhythm‑in‑nature” units.</li>
+          <li>Designed 2,000 sq ft school garden used in cross‑disciplinary STEM & music “rhythm‑in‑nature” units.</li>
         </ul>
       </article>
       <article class="experience-item">
         <h3>Broadneck High School</h3>
-        <span class="period">Teacher | 2005 – 2010</span>
+        <span class="period">Teacher | 2005 – 2010</span>
         <ul>
           <li>Directed marching & concert bands, achieving consecutive “excellent” ratings at county festival.</li>
-          <li>Established Tri‑M® Music Honor Society and annual <em>Play‑It‑Forward</em> benefit concert raising $3 k for local charities.</li>
+          <li>Established Tri‑M® Music Honor Society and annual <em>Play‑It‑Forward</em> benefit concert raising $3 k for local charities.</li>
         </ul>
       </article>
     </section>
@@ -115,26 +117,38 @@
     <section id="education">
       <h2>Education & Credentials</h2>
       <div class="education-item">
-        <h3>Master of Music, University of Maryland – College Park</h3>
-        <span>May 2010</span>
+        <h3>Master of Music, University of Maryland – College Park</h3>
+        <span>May 2010</span>
       </div>
       <div class="education-item">
-        <h3>Bachelor of Instrumental Music K‑12, University of Maryland – College Park</h3>
-        <span>Dec 2004</span>
+        <h3>Bachelor of Instrumental Music K‑12, University of Maryland – College Park</h3>
+        <span>Dec 2004</span>
       </div>
       <div class="education-item">
-        <h3>Maryland Educator Certificate, Music K‑12</h3>
+        <h3>Maryland Educator Certificate, Music K‑12</h3>
         <span>Valid through 2028</span>
       </div>
     </section>
 
-    <!-- COVER LETTER (COLLAPSIBLE) -->
+    <!-- FULL COVER LETTER -->
     <section id="cover">
-      <h2>Cover Letter Snapshot</h2>
+      <h2>Cover Letter</h2>
       <p>
-        Dear Hiring Committee, <br><br>
-        I am excited to apply for the <strong>Elementary Instrumental Music Teacher</strong> position at your school. Over two decades I have nurtured student musicians, built thriving programs, and infused STEM‑focused, project‑based learning into music curricula. Highlights include growing guitar‑ensemble enrollment from 12 to 48 students and leading the initiative that earned North County HS its Maryland Green School designation. I look forward to bringing this energy, creativity, and results‑orientation to your young learners.<br><br>
-        Thank you for your consideration.<br>
+        <strong>May 13, 2025</strong><br><br>
+        Dear Hiring Committee,<br><br>
+        I am writing to express my enthusiastic interest in the <strong>Elementary Instrumental Music Teacher</strong> position at <strong>Cedar Grove Elementary School</strong>. With more than two decades of experience inspiring young musicians in Anne Arundel County Public Schools, I bring a unique blend of instrumental expertise, cross‑curricular STEM innovation, and an unwavering commitment to nurturing students’ creativity and confidence.<br><br>
+        Over the past 15 years at North County High School, I have:<br>
+      </p>
+      <ul>
+        <li>Grown guitar‑ensemble enrollment from 12 to 48 students and founded jazz, percussion, and chamber groups.</li>
+        <li>Directed three seasonal concerts each year, welcoming 600+ family members and raising $4 k annually for program needs.</li>
+        <li>Led the Green Technology Pathway, designing a school garden used in cross‑disciplinary “sound‑in‑nature” lessons that earned the school Maryland Green School designation.</li>
+      </ul>
+      <p>
+        These experiences underscore my belief that music education thrives when it is hands‑on, community‑centered, and connected to the real world. I am eager to bring this philosophy to Cedar Grove’s elementary learners—introducing them to instruments, fostering ensemble collaboration, and integrating simple science concepts like sound waves through engaging, age‑appropriate activities.<br><br>
+        I would welcome the opportunity to share a sample lesson, concert footage, or further discuss how my background aligns with your vision for a vibrant, inclusive music program.<br><br>
+        Thank you for your time and consideration. I look forward to the possibility of working together.<br><br>
+        Sincerely,<br>
         <em>Michael O'Donnell</em>
       </p>
     </section>
@@ -150,7 +164,7 @@
       </ul>
     </section>
 
-    <!-- CONTACT FOOTER -->
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Let’s Connect</h2>
       <p>Email <a href="mailto:makeitgroove@gmail.com">makeitgroove@gmail.com</a> or call <a href="tel:13017854440">301‑785‑4440</a>. Portfolio video & full résumé available on request.</p>
@@ -158,7 +172,7 @@
   </main>
 
   <footer style="text-align:center;padding:1.5rem 0;font-size:0.85rem;color:#888">
-    © 2025 Michael O'Donnell • Site crafted with ❤️ & GitHub Pages
+    © 2025 Michael O'Donnell • Site crafted with ❤️ & GitHub Pages
   </footer>
 </body>
 </html>
